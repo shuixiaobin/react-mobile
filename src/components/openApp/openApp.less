@@ -1,0 +1,41 @@
+@import '../../assets/style/variable.less';
+
+#openAppWrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 20px 30px;
+  height: 120px;
+  width: 100%;
+  display: table-cell;
+  background: @white;
+  box-shadow: 0px -4px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 16px 16px 0px 0px;
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+  }
+  .content {
+    > p,
+    > strong {
+      margin-top: 15px;
+    }
+    :first-child {
+      color: @main-black;
+    }
+    :last-child {
+      color: @time-col;
+    }
+  }
+  .open {
+    padding: 15px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color: @white;
+    background: @red;
+    margin-top: 8px;
+  }
+}

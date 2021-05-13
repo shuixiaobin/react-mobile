@@ -1,0 +1,1051 @@
+@import "../../assets/style/variable.less";
+
+.classDetail {
+  .bannerCon {
+    width: 100%;
+    height: 424px;
+    position: relative;
+    .banner {
+      width: 100%;
+      height: 100%;
+    }
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .shadeBox {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .class_intro {
+        display: block;
+        padding-left: 25px;
+        box-sizing: border-box;
+        width: 238px;
+        height: 72px;
+        background: @red;
+        border-radius: 40px;
+        opacity: 0.9;
+        color: @white;
+        font-size: 28px;
+        line-height: 72px;
+        .play {
+          font-size: 70px;
+          background: transparent;
+        }
+      }
+      .freeLestion {
+        margin-top: 28px;
+        color: @white;
+        line-height: 40px;
+        font-size: 28px;
+        .ml7 {
+          margin-left: 7px;
+        }
+        i {
+          background: transparent;
+        }
+      }
+    }
+  }
+  .timeLimit {
+    background: ~"url(@{myUrl}time-bg.png)" no-repeat center;
+    background-size: 100%;
+    height: 54px;
+    width: 100%;
+    z-index: 99;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    color: @white;
+    text-align: right;
+    padding-right: 30px;
+    box-sizing: border-box;
+    padding-top: 12px;
+    i {
+      font-style: normal;
+      display: inline-block;
+      padding: 0 5px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 4px;
+      background: @white;
+      color: #ff656b;
+      text-align: center;
+    }
+  }
+  .bg2 {
+    background: ~"url(@{myUrl}time2-bg.png)" no-repeat center;
+    background-size: 100%;
+  }
+  .bg3 {
+    background: ~"url(@{myUrl}time3-bg.png)" no-repeat center;
+    background-size: 100%;
+  }
+
+  .buyWrapper {
+    display: flex;
+    justify-content: space-between;
+    .price {
+      height: 44px;
+      font-size: 36px;
+      font-weight: 600;
+      color: @price-col;
+      line-height: 44px;
+      .icon {
+        width: 18px;
+        height: 40px;
+        font-size: 28px;
+        font-style: normal;
+        line-height: 40px;
+      }
+    }
+    .actualPrice {
+      height: 40px;
+      font-size: 28px;
+      font-weight: 600;
+      color: @time-col;
+      text-decoration: line-through;
+      line-height: 40px;
+    }
+    .buyCount {
+      height: 36px;
+      font-size: 26px;
+      color: @time-col;
+      line-height: 36px;
+    }
+  }
+  .chooseArea {
+    width: 100%;
+    height: 96px;
+    background: rgba(255, 252, 227, 1);
+    color: @title-black;
+    line-height: 96px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    position: fixed;
+    bottom: 100px;
+    .choosed {
+      font-size: 30px;
+      font-weight: 400;
+      color: rgba(184, 133, 13, 1);
+    }
+    i {
+      color: rgba(184, 133, 13, 1);
+    }
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: @white;
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    .buyWrapper {
+      width: 50%;
+      height: 100px;
+      background: @white;
+      border-radius: 16px 0px 0px 0px;
+      .priceWrapper {
+        width: 100%;
+        line-height: 100px;
+        text-indent: 30px;
+      }
+    }
+    .buyBtn {
+      text-align: center;
+      width: 50%;
+      height: 100px;
+      background: @red;
+      box-shadow: 0px 12px 8px 0px @price-col;
+      border-radius: 0px 16px 0px 0px;
+      font-size: 32px;
+      font-weight: 600;
+      color: @white;
+      line-height: 100px;
+    }
+    .buyBtn2 {
+      color: @title-black;
+      background: linear-gradient(
+        270deg,
+        rgba(228, 228, 228, 1) 0%,
+        rgba(216, 216, 216, 1) 100%
+      );
+      box-shadow: none;
+    }
+  }
+  .detail {
+    box-sizing: border-box;
+    .p30 {
+      padding: 30px;
+      background: @white;
+    }
+    .title {
+      font-size: 36px;
+      font-weight: 600;
+      color: @main-black;
+      line-height: 50px;
+      word-break: break-all;
+    }
+    .desc {
+      font-size: 26px;
+      color: @date-col-2;
+      line-height: 36px;
+    }
+
+    .listCon {
+      padding: 0 30px;
+      box-sizing: border-box;
+      background: rgba(249, 249, 249, 1);
+      border-radius: 16px 16px 0px 0px;
+      border: 1px solid rgba(225, 225, 225, 1);
+      border-bottom: none;
+      &.oh {
+        overflow: hidden;
+        height: 240px;
+      }
+      .item {
+        padding: 22px 0;
+        border-bottom: 1px solid #e1e1e1;
+        display: flex;
+        align-items: flex-start;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      .icon {
+        font-size: 20px;
+        color: @time-col;
+      }
+      .blodWord {
+        display: inline-block;
+        width: 150px;
+        text-align: left;
+        height: 36px;
+        font-size: 26px;
+        font-weight: 600;
+        color: @title-black;
+        line-height: 36px;
+        margin-right: 26px;
+      }
+      .langWord {
+        text-align: left;
+        font-size: 26px;
+        color: @title-black;
+      }
+      .content {
+        display: inline-block;
+        width: 430px;
+        font-size: 26px;
+        font-weight: 400;
+        color: @title-black;
+        line-height: 36px;
+      }
+    }
+    .htmlText {
+      width: 100%;
+      margin-top: 30px;
+      overflow: hidden;
+      img {
+        margin: 0 !important;
+        max-width: 100%;
+      }
+      p {
+        font-size: inherit !important;
+      }
+      span {
+        font-size: inherit !important;
+      }
+    }
+    .pull {
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      border-radius: 0px 0px 16px 16px;
+      background: #f9f9f9;
+      border: 1px solid rgba(225, 225, 225, 1);
+      border-top: none;
+      i {
+        display: inline-block;
+        color: @title-black;
+        transform: scale(0.4);
+      }
+    }
+  }
+  .buyWrapper {
+    display: flex;
+    justify-content: space-between;
+    .price {
+      height: 44px;
+      font-size: 36px;
+      font-weight: 600;
+      color: @price-col;
+      line-height: 44px;
+      .icon {
+        width: 18px;
+        height: 40px;
+        font-size: 28px;
+        font-style: normal;
+        line-height: 40px;
+      }
+    }
+    .green {
+      color: @green;
+    }
+    .actualPrice {
+      height: 40px;
+      font-size: 28px;
+      font-weight: 600;
+      color: @time-col;
+      text-decoration: line-through;
+      line-height: 40px;
+    }
+    .buyCount {
+      height: 36px;
+      font-size: 26px;
+      color: @time-col;
+      line-height: 36px;
+    }
+  }
+  .outline {
+    background: @white;
+    .title {
+      box-sizing: border-box;
+      padding: 0 30px;
+      width: 100%;
+      height: 88px;
+      line-height: 88px;
+      font-size: 32px;
+      position: relative;
+      i {
+        display: inline-block;
+        color: @title-black;
+        position: absolute;
+        right: 20px;
+        top: 5px;
+        font-size: 40px;
+        transform: scale(0.4);
+      }
+    }
+
+    .addMore {
+      width: 192px;
+      height: 60px;
+      background: @container-bg;
+      border-radius: 40px;
+      font-size: 26px;
+      font-weight: 600;
+      color: @main-black;
+      line-height: 60px;
+      text-align: center;
+      margin: 20px auto;
+    }
+    .threeLevelTit {
+      width: 646px;
+    }
+    .twoLevelTit {
+      width: 616px;
+      padding-left: 30px;
+    }
+    .oneLevelTit {
+      max-width: 532px;
+      height: 40px;
+      font-size: 28px;
+      font-weight: 400;
+      color: @main-black;
+      line-height: 40px;
+    }
+    .oneLevel {
+      width: 100%;
+      box-sizing: border-box;
+      background: rgba(249, 249, 249, 1);
+    }
+    .container {
+      width: 100%;
+      padding: 22px 0 16px 60px;
+      box-sizing: border-box;
+    }
+    .flexWrapper {
+      display: flex;
+    }
+    .num {
+      font-size: 28px;
+      margin-right: 26px;
+      line-height: 40px;
+    }
+    .titleWrapper {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      .audition {
+        width: 72px;
+        height: 40px;
+        background: @red;
+        border-radius: 4px;
+        font-size: 24px;
+        font-weight: 600;
+        color: @white;
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+    .topWrapper {
+      display: flex;
+    }
+    .desc {
+      width: 100%;
+      box-sizing: border-box;
+      padding-right: 30px;
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      color: @date-col-2;
+      .classDesc {
+        height: 34px;
+        font-size: 24px;
+        line-height: 34px;
+      }
+      .teacher {
+        display: inline-block;
+        width: 200px;
+      }
+    }
+  }
+  .introduce {
+    .intro_item {
+      background: @white;
+      padding: 30px;
+      box-sizing: border-box;
+      .topWrapper {
+        display: flex;
+        .avatar {
+          width: 120px;
+          height: 120px;
+        }
+        .topRight {
+          margin-left: 40px;
+          .title {
+            display: inline-block;
+            padding: 0 20px;
+            margin-top: 28px;
+            height: 44px;
+            background: @linear-col-2;
+            border-radius: 20px;
+            font-size: 26px;
+            font-weight: 600;
+            color: @white;
+            line-height: 44px;
+            text-shadow: 0px 0px 2px rgba(233, 23, 23, 0.5);
+          }
+        }
+      }
+      .introCon {
+        color: @title-black;
+        height: 44px;
+        color: @title-black;
+        .name {
+          font-size: 36px;
+          font-weight: 600;
+          line-height: 44px;
+        }
+        .studentNum {
+          font-size: 24px;
+          line-height: 44px;
+          margin-left: 40px;
+        }
+        .classNum {
+          margin-left: 40px;
+        }
+      }
+      .desc {
+        &::after {
+          position: absolute;
+          left: 20px;
+          top: -12px;
+          content: "";
+          width: 0;
+          height: 0;
+          border-right: 15px solid transparent;
+          border-left: 15px solid transparent;
+          border-bottom: 15px solid @container-bg;
+        }
+        position: relative;
+        font-size: 28px;
+        color: @pay-back;
+        line-height: 40px;
+        background: @container-bg;
+        padding: 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .evaluate {
+    background: @white;
+    padding: 30px;
+    .title {
+      height: 44px;
+      font-size: 32px;
+      font-weight: 600;
+      color: @main-black;
+      line-height: 44px;
+      .num {
+        height: 44px;
+        font-size: 24px;
+        font-weight: 600;
+        color: @time-col;
+        line-height: 44px;
+      }
+    }
+    .evaluateItem {
+      padding: 20px 0;
+      border-bottom: 1px solid @container-bg;
+      background: @white;
+      width: 690px;
+      .info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .infoLeft {
+          line-height: 64px;
+          img {
+            display: block;
+            width: 64px;
+            height: 64px;
+          }
+          .line {
+            padding: 0 20px;
+          }
+          span {
+            height: 40px;
+            font-size: 28px;
+            font-weight: 600;
+            color: @title-black;
+            line-height: 40px;
+          }
+        }
+      }
+      .desc {
+        font-size: 28px;
+        color: @date-col-2;
+        line-height: 40px;
+        word-break: break-all;
+      }
+      .buttomInfo {
+        color: @time-col;
+        height: 34px;
+        font-size: 24px;
+        line-height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .tit {
+          text-align: right;
+          display: inline-block;
+          max-width: 400px;
+        }
+      }
+    }
+  }
+  .rateWrapper {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    .starWrapper {
+      img {
+        width: 44px;
+        height: 44px;
+      }
+    }
+  }
+  .resultItem {
+    width: 250px;
+    height: 100px;
+    line-height: 100px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    background: rgba(246, 246, 246, 1);
+    border-radius: 8px;
+    position: relative;
+    .redWord {
+      position: absolute;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 8px;
+      bottom: 0;
+      right: 0;
+      height: 32px;
+      line-height: 32px;
+      font-size: 20px;
+      color: #ec74a0;
+      display: inline-block;
+      padding: 0 8px;
+      background: #ffebf2;
+    }
+    .normalword {
+      background: #e0e0e0;
+      color: @title-black;
+    }
+  }
+  .areaBox {
+    height: 100%;
+  }
+  .areaShade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.25);
+    &.fadeIn {
+      transition: opacity 0.3s ease-out;
+    }
+    &.fadeOut {
+      display: none;
+      transition: opacity 0.3s ease-out;
+      opacity: 0;
+    }
+  }
+  .areaWrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background: @white;
+    width: 100%;
+    border-radius: 16px 16px 0px 0px;
+    padding: 30px 0;
+    box-sizing: border-box;
+    &.moveBottom {
+      transition: transform 0.3s ease-out;
+      transform: translateY(0%);
+    }
+    &.moveTop {
+      transition: transform 0.3s ease-out;
+      transform: translateY(100%);
+    }
+    i {
+      color: @carousel-slide;
+      position: absolute;
+      right: 32px;
+      font-size: 14px;
+      top: 22px;
+    }
+    .areaTitle {
+      width: 620px;
+      font-size: 32px;
+      font-weight: 500;
+      color: @main-black;
+      line-height: 44px;
+      margin-left: 30px;
+    }
+    .areaBuyWrapper {
+      padding: 20px 30px;
+      border-bottom: 1px solid @container-bg;
+      line-height: 56px;
+      margin-top: 10px;
+      .areaPrice {
+        font-size: 40px;
+        font-weight: 500;
+        color: @class-list-time;
+      }
+      .areaOriginalPrice {
+        font-size: 32px;
+        font-weight: 500;
+        color: @time-col;
+        text-decoration: line-through;
+      }
+      .areaNum {
+        font-size: 28px;
+        font-weight: 500;
+        color: @time-col;
+      }
+    }
+    .chooseType {
+      height: 40px;
+      font-size: 28px;
+      font-weight: 400;
+      color: @main-black;
+      line-height: 40px;
+      margin: 30px 0;
+      padding: 0 30px;
+    }
+    .areaData, .provinceData {
+      max-height: 454px;
+      overflow-y: scroll;
+      padding: 0 0 28px 30px;
+      .areaItem {
+        width: 140px;
+        height: 64px;
+        text-align: center;
+        border: 2px solid @white;
+        margin-bottom: 36px;
+        line-height: 64px;
+        margin-right: 38px;
+        background: rgba(242, 242, 242, 1);
+        border: 2px solid rgba(242, 242, 242, 1);
+        border-radius: 16px;
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+        &.hov {
+          background: rgba(255, 237, 238, 1);
+          border: 2px solid @class-list-time;
+          color: @class-list-time;
+        }
+      }
+      .locationItem, .provinceItem {
+        display: inline-block;
+        padding: 0 15px;
+        height: 64px;
+        text-align: center;
+        border: 2px solid @white;
+        margin-bottom: 36px;
+        line-height: 64px;
+        margin-right: 38px;
+        background: rgba(242, 242, 242, 1);
+        border: 2px solid rgba(242, 242, 242, 1);
+        border-radius: 16px;
+        // &:nth-child(2n) {
+        //   margin-right: 0;
+        // }
+        &.hov {
+          background: rgba(255, 237, 238, 1);
+          border: 2px solid @class-list-time;
+          color: @class-list-time;
+        }
+      }
+      .locationItem {
+        padding: 0 25px;
+        // min-width: 240px;
+        margin-bottom: 25px;
+      }
+      .provinceItem {
+        margin-right: 38px !important;
+      }
+    }
+    .schoolsCenter {
+      max-height: 300px;
+    }
+    .provinceData {
+      border-bottom: 1px solid #f3f3f3;
+      max-height: 200px;
+    }
+    .selectPart{
+      min-height: 300px;
+      max-height: 750px;
+      overflow: auto;
+      padding-left:30px;
+      .itemTotal{
+        display: block;
+      }
+      .parentItem{
+        border-bottom: 1px solid @container-bg;  
+        font-size: 28px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #000000;
+        line-height: 20px;
+        .areaItem {
+          display:inline-block;
+          min-width:136px;
+          height: 64px;
+          font-size: 24px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #4A4A4A;
+          line-height: 20px;
+          border-radius: 8px;
+          text-align: center;
+          border: 2px solid #E0E0E0;
+          padding: 0 20px;
+          margin-bottom: 36px;
+          line-height: 64px;
+          margin-right: 20px;
+          &:nth-child(4n) {
+            margin-right: 0;
+          }
+          &.hov {
+            background: rgba(255, 237, 238, 1);
+            border: 2px solid @class-list-time;
+            color: @class-list-time;
+          }
+        }
+        .areaItemActive{
+          background-color: #fff8f8;
+          border-color: #ff3f47;
+        }
+        .areaItemNot{
+          cursor: not-allowed;
+          background: #f5f5f5;
+          border-color: #e0e0e0;
+          color: #979797;
+        }
+      }
+    }
+    .confirmWrapper {
+      width: 100%;
+      height: 168px;
+      background: @white;
+      box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .confirmBtn {
+        width: 630px;
+        height: 88px;
+        background: rgba(255, 109, 115, 1);
+        box-shadow: 0px 12px 8px 0px rgba(255, 109, 115, 0.3);
+        border-radius: 44px;
+        font-size: 36px;
+        color: @white;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  .schedule {
+    padding: 0 30px 100px 30px;
+    background-color: @white;
+    .titleWrapper {
+      display: flex;
+      justify-content: space-between;
+      height: 84px;
+      align-items: center;
+      .title {
+        width: 618px;
+        font-size: 32px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 1);
+      }
+      i {
+        transform: scale(0.4);
+        font-size: 40px;
+        color: @carousel-slide;
+      }
+    }
+    .date {
+      height: 84px;
+      font-size: 32px;
+      font-weight: 600;
+      color: @title-black;
+      line-height: 84px;
+      i {
+        color: @time-col;
+      }
+    }
+  }
+  .scheduleItem {
+    margin-left: 6px;
+    .b_cir {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: @nomore-bg;
+      position: relative;
+    }
+    .s_cir {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: @time-col;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .content {
+      width: 624px;
+      height: 108px;
+      background: @nomore-bg;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px 0 32px;
+      border-radius: 8px;
+      .time {
+        font-size: 32px;
+        font-weight: 600;
+        color: @title-black;
+        line-height: 44px;
+      }
+      .teacher {
+        font-size: 26px;
+        font-weight: 300;
+        color: @main-black;
+        line-height: 36px;
+      }
+    }
+  }
+  .scheduleContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  :global {
+    .am-tabs {
+      padding-bottom: 100px;
+    }
+    .am-tabs-tab-bar-wrap {
+      height: 88px;
+      background: @white;
+    }
+    .am-tabs-default-bar-tab {
+      font-size: 32px;
+      height: 88px;
+      color: @title-black;
+    }
+    .am-tabs-default-bar-tab-active {
+      color: @main-black;
+      font-weight: 600;
+      z-index: 10;
+    }
+    .am-tabs-default-bar-underline {
+      border: none;
+      bottom: 26px;
+      height: 10px;
+      z-index: 9;
+      background: @price-col;
+      box-shadow: 0px 4px 8px 0px rgba(255, 109, 115, 0.3);
+    }
+    .am-list-body:before {
+      background: transparent !important;
+    }
+  }
+}
+.ActivityDetail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  .shade {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+  }
+  .ActivityDetailWrapper {
+    width: 750px;
+    height: 692px;
+    overflow-y: scroll;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: @white;
+    z-index: 100;
+    h3 {
+      box-sizing: border-box;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 36px;
+      text-align: center;
+      position: relative;
+      font-weight: 600;
+      color: @main-black;
+      line-height: 50px;
+      i {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: @time-col;
+      }
+    }
+    .actList {
+      max-height: 562px;
+      //overflow-y: scroll;
+      .actItem {
+        padding: 30px 20px;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        color: @title-black;
+        .tag {
+          padding: 0 10px;
+          height: 32px;
+          font-size: 22px;
+          font-weight: 400;
+          display: inline-block;
+          border: 1px solid #ff3f47;
+          border-radius: 20px;
+          margin-left: 10px;
+          color: rgba(255, 63, 71, 1);
+          line-height: 32px;
+        }
+        .desc {
+          margin-left: 10px;
+          flex: 1;
+          height: 72px;
+          font-size: 26px;
+          color: @title-black;
+          line-height: 36px;
+        }
+      }
+      .teacherItem {
+        display: inline-block;
+        height: 90px;
+        width: 33%;
+        color: @title-black;
+        text-align: center;
+        line-height: 90px;
+      }
+      .hov {
+        color: @price-col;
+      }
+      .border {
+        &:first-child {
+          border-top: 1px solid #dddddd;
+        }
+        border-bottom: 1px solid #dddddd;
+      }
+    }
+  }
+}
+.activity {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30px;
+  height: 96px;
+  background: @white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  i {
+    color: @title-black;
+  }
+  .act_title {
+    width: 90px;
+    height: 36px;
+    font-size: 26px;
+    color: @date-col-2;
+    line-height: 36px;
+  }
+  .act_content {
+    .activityItem {
+      padding: 0 10px;
+      height: 32px;
+      font-size: 22px;
+      font-weight: 400;
+      display: inline-block;
+      border: 1px solid #ff3f47;
+      border-radius: 20px;
+      margin-left: 10px;
+      color: rgba(255, 63, 71, 1);
+      line-height: 32px;
+    }
+  }
+}

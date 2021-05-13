@@ -1,0 +1,88 @@
+@import '../../assets/style/variable.less';
+
+#listWrap {
+  user-select: none;
+  touch-callout: none;
+  -webkit-touch-callout: none; /*系统默认菜单被禁用*/
+  -webkit-user-select: none; /*禁用文本复制*/
+  -webkit-tap-highlight-color: transparent;
+}
+
+.listView {
+  user-select: none;
+  touch-callout: none;
+  -webkit-touch-callout: none; /*系统默认菜单被禁用*/
+  -webkit-user-select: none; /*禁用文本复制*/
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  background: @nomore-bg;
+}
+.renderFooter {
+  padding: 30px 0 22px 0;
+  text-align: center;
+}
+.nomore {
+  color: @time-col;
+  margin: 0 auto;
+  width: 265px;
+  > ul {
+    line-height: 28px;
+    > li {
+      float: left;
+      &.text {
+        margin: 0 22px;
+      }
+      &.line {
+        width: 40px;
+        margin: 14px 0;
+      }
+    }
+  }
+}
+.gif {
+  color: @time-col;
+  line-height: 120px;
+  height: 120px;
+  > p {
+    margin-top: 40px;
+    img {
+      margin-right: 6px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+:global {
+  .am-pull-to-refresh-down .am-pull-to-refresh-indicator {
+    margin-top: -120px;
+    height: 120px;
+    line-height: 120px;
+  }
+}
+
+.allnomore {
+  background: @nomore-bg;
+  text-align: center;
+  width: 100%;
+  > div {
+    margin-top: 332px;
+    display: inline-block;
+    img {
+      width: 190px;
+      height: 244px;
+    }
+    p {
+      color: @time-col;
+      margin-top: 32px;
+    }
+  }
+}
+
+:global {
+  .am-list-body {
+    background: @container-bg;
+  }
+  .am-list-body:after {
+    background-color: transparent !important;
+  }
+}

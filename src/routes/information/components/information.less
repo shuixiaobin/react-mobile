@@ -1,0 +1,119 @@
+@import '../../../assets/style/variable.less';
+
+/* .zw {
+  height: 88px;
+} */
+
+#inforBar {
+  /* position: fixed; */
+  /* top: 88px; */
+  z-index: 100;
+  width: 100%;
+  height: 88px;
+  background: @white;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.07);
+  position: relative;
+  z-index: 100;
+  > ul {
+    text-align: center;
+    > li {
+      width: calc(100% / 3);
+      line-height: 56px;
+      margin: 16px 0;
+      &:nth-child(2) {
+        border-right: 2px solid @container-bg;
+        border-left: 2px solid @container-bg;
+      }
+      span,
+      i {
+        vertical-align: middle;
+        display: inline-block;
+      }
+      span {
+        width: 70%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      i {
+        transition: all 0.3s;
+        &.down {
+          transform: scale(0.4) rotate(180deg);
+        }
+        &.up {
+          transform: scale(0.4) rotate(0deg);
+        }
+      }
+    }
+  }
+  > div {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1000;
+    &.searchPosition {
+      top: 266px;
+    }
+    &inforPosition {
+      top: 176px;
+    }
+  }
+}
+
+/* 筛选项 */
+.barBox {
+  margin-top: -2px;
+}
+.examView,
+.areaView,
+.bulletinView {
+  padding: 30px 0;
+  background: @white;
+  overflow: auto;
+  :global {
+    /* 筛选列表 */
+    .choose_li {
+      color: @white!important;
+      background: @price-col!important;
+    }
+  }
+}
+
+.type_title {
+  color: @title-black;
+  padding-left: 30px;
+}
+
+.type_list {
+  /* margin: 10px 0 0 -30px; */
+  margin: 10px auto 0 auto;
+  > li {
+    margin: 0 0 30px 30px;
+    width: 210px;
+    height: 60px;
+    line-height: 60px;
+    background: @container-bg;
+    color: @title-black;
+    border-radius: 30px;
+    text-align: center;
+  }
+}
+
+/* 资讯列表 */
+.mation_item {
+  background: @white;
+  padding: 30px;
+  border-bottom: 1px solid @container-bg;
+}
+
+.mation_title {
+  color: @title-black;
+  font-weight: 600;
+}
+
+.mation_bottom {
+  color: @time-col;
+}

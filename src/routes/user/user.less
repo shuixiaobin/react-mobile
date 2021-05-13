@@ -1,0 +1,31 @@
+@import '../../assets/style/variable.less';
+
+#userCenter {
+  > ul {
+    background: @white;
+    > li {
+      span {
+        line-height: 44px;
+      }
+      &:nth-child(3) {
+        border-bottom: 20px solid @container-bg;
+      }
+      > div {
+        padding: 20px 34px 20px 0;
+        margin-left: 30px;
+        border-bottom: 1px solid @container-bg;
+        .left {
+          > i {
+            margin: 10px 20px 0 0;
+          }
+        }
+        .right {
+          .phone {
+            color: @time-col;
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import '../../assets/style/variable.less';
+
+#searchWrap {
+  background: @white;
+  .nomore {
+    background: @nomore-bg;
+    text-align: center;
+    position: fixed;
+    top: 178px;
+    width: 100%;
+    height: calc(100% - 178px);
+    > div {
+      margin-top: 332px;
+      display: inline-block;
+      img {
+        width: 356px;
+        height: 200px;
+      }
+      p {
+        color: @time-col;
+        margin-top: 32px;
+      }
+    }
+  }
+}
+
+#searchBarWrap {
+  width: 100%;
+  background: @white;
+  z-index: 100;
+  margin-left: -25px;
+  padding-right: 25px;
+  border-bottom: 2px solid @container-bg;
+  :global {
+    .am-tabs {
+      padding-bottom: 0;
+    }
+    .am-tabs-tab-bar-wrap {
+      height: 88px;
+      background: @white;
+    }
+    .am-tabs-default-bar-tab {
+      font-size: 32px;
+      height: 88px;
+      color: @title-black;
+    }
+    .am-tabs-default-bar-tab,
+    .am-tabs-default-bar-tab-active {
+      width: 180px !important;
+    }
+    .am-tabs-default-bar-tab-active {
+      color: @main-black;
+      font-weight: 600;
+      z-index: 10;
+    }
+    .am-whitespace {
+      display: none;
+    }
+    .am-tabs-default-bar-underline {
+      border: none;
+      bottom: 10px;
+      height: 8px;
+      z-index: 9;
+      border-radius: 6px;
+      background: @linear-col-3;
+      width: 68px !important;
+    }
+    .am-list-body:before {
+      background: transparent !important;
+    }
+  }
+}
+
+.hot,
+.history {
+  background: @white;
+  padding: 20px 30px;
+}
+
+.history {
+  h2 {
+    color: @date-col;
+  }
+  > div {
+    p {
+      color: @title-black;
+      margin-top: 30px;
+      > i {
+        color: @search-icon;
+      }
+    }
+  }
+}
+
+.hot {
+  border-bottom: 2px solid @container-bg;
+  h2 {
+    color: @date-col;
+  }
+  > div {
+    /*
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    */
+    p {
+      color: @title-black;
+      text-align: center;
+      height: 56px;
+      line-height: 56px;
+      padding: 0 20px;
+      background: @container-bg;
+      border-radius: 28px;
+      margin: 30px 30px 0 0;
+    }
+  }
+}

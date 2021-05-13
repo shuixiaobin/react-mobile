@@ -1,0 +1,163 @@
+@import "../../../assets/style/variable.less";
+.orderList {
+  background: @white;
+  .orderItem {
+    border-bottom: 20px solid @container-bg;
+    background: @white;
+    .orderInfo {
+      padding: 0 30px;
+      border-bottom: 1px solid @container-bg;
+      height: 74px;
+      line-height: 74px;
+      color: @title-black;
+      .statusWrapper {
+        display: flex;
+        align-items: center;
+        .red {
+          color: @price-col;
+        }
+      }
+      .pact {
+        font-style: normal;
+        display: block;
+        width: 72px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        border-radius: 4px;
+        border: 1px solid rgba(119, 170, 255, 1);
+        color: #77aaff;
+      }
+      .orderNum {
+        display: inline-block;
+        width: 600px;
+      }
+    }
+    .classInfo {
+      padding: 20px 30px;
+      .classTitWrapper {
+        .classTit {
+          width: 540px;
+          color: @main-black;
+          line-height: 40px;
+        }
+        .money {
+          span {
+            display: block;
+            height: 34px;
+            line-height: 34px;
+          }
+          .actualPrice {
+            color: @title-black;
+          }
+          .price {
+            color: @time-col;
+            text-decoration: line-through;
+          }
+        }
+      }
+      .teacherWrapper {
+        margin-top: 18px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid @container-bg;
+        .teacherList {
+          height: 34px;
+          line-height: 34px;
+          color: @title-black;
+        }
+        .classHour {
+          height: 34px;
+          color: rgba(109, 113, 114, 1);
+          line-height: 34px;
+        }
+      }
+      .payWrapper {
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .realPayment {
+        height: 34px;
+        color: @title-black;
+        line-height: 34px;
+        b {
+          height: 40px;
+          font-weight: 600;
+          line-height: 40px;
+        }
+      }
+
+      .bigImg {
+        float: left;
+        margin-top: 5px;
+        > ul {
+          li {
+            margin-right: -28px;
+            text-align: center;
+            display: inline-block;
+            > p {
+              font-size: 30px;
+              &:first-child {
+                margin: 0 auto 10px auto;
+                width: 56px;
+                height: 56px;
+                > img {
+                  width: 100%;
+                  height: auto;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .goPay {
+        width: 160px;
+        height: 64px;
+        background: @linear-col;
+        color: @white;
+        border: none;
+        border-radius: 36px;
+      }
+      .delete {
+        width: 175px;
+        border-radius: 36px;
+        height: 64px;
+        border: 2px solid rgba(225, 225, 225, 1);
+        background: @white;
+        color: #6d7172;
+        margin: 0 8px;
+      }
+    }
+  }
+  :global {
+    .am-tabs-tab-bar-wrap {
+      height: 80px;
+      background: @white;
+      border-bottom: 1px solid @container-bg;
+    }
+    .am-tabs-default-bar-tab {
+      font-size: 32px;
+      height: 80px;
+      color: @title-black;
+    }
+    .am-tabs-default-bar-tab-active {
+      color: @main-black;
+      font-weight: 600;
+      z-index: 10;
+    }
+    .am-tabs-default-bar-underline {
+      border: none;
+      bottom: 10px !important;
+      height: 10px;
+      z-index: 9;
+      background: @linear-col-3;
+      box-shadow: 0px 4px 8px 0px rgba(255, 109, 115, 0.3);
+    }
+    .am-list-body:before {
+      background: transparent !important;
+    }
+  }
+}

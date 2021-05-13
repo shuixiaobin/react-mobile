@@ -1,0 +1,137 @@
+@import '../../../assets/style/variable.less';
+
+.addresList {
+  position: relative;
+  .content {
+    width: 100%;
+    margin-top: 20px;
+    .part1 {
+      .listIteam {
+        background-color: #fff;
+        padding-top: 5px;
+        margin: 15px auto;
+        .name {
+          margin-left: 40px;
+          font-size: 28px;
+          font-family: PingFangSC-Semibold;
+          font-weight: 600;
+          color: rgba(0, 0, 0, 1);
+          line-height: 40px;
+          .phone {
+            margin-left: 20px;
+          }
+        }
+        .itemP{
+          overflow: hidden;
+        }
+
+        .area {
+          margin: 20px 38px 20px 40px;
+          font-size: 28px;
+          font-family: PingFangSC-Regular;
+          font-weight: 400;
+          color: rgba(109, 113, 114, 1);
+          line-height:40px; 
+          float:left;
+          width: 590px;
+          .default{
+            font-size:28px;
+            font-family:PingFangSC-Regular,PingFangSC;
+            font-weight:400;
+            color:rgba(235,88,91,1);
+          }
+        }
+
+        .bottomLine {
+          width: 100%;
+          height: 2px;
+          background: rgba(243, 243, 243, 1);
+          margin-bottom: 20px;
+        }
+
+        .redSel {
+          color: @price-col;
+          float:right;
+          margin-right: 30px;
+        }
+
+        .set {
+          overflow: hidden;
+          margin: 0 30px 26px 40px;
+          padding-bottom: 10px;
+          .default {
+            float: left;
+          }
+          .delete {
+            float: right;
+          }
+          .edit {
+            float: right;
+            margin-right: 32px;
+          }
+
+          .text {
+            font-size: 24px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(74, 74, 74, 1);
+            line-height: 34px;
+            margin-left: 20px;
+          }
+          .icon {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+          }
+          .red {
+            color: #d1d1d1;
+          }
+        }
+
+     
+      }
+    }
+  }
+
+  .open {
+    position: fixed;
+    right: 0px;
+    bottom: 208px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 0px 26px 0px #FF6D7340;
+    border-radius:200px 0px 0px 200px;
+    width: 200px;
+    height:88px;
+    border:none;
+    span{
+      color: #EB585BFF;
+      font-size:28px;
+      font-family:PingFangSC-Medium,PingFangSC;
+      font-weight:500;
+      line-height:40px;
+    }
+  }
+
+  .foot {
+    position: fixed;
+    left: 60px;
+    bottom: 30px;
+    width: 630px;
+    height: 88px;
+    background: linear-gradient(
+      90deg,
+      rgba(243, 93, 107, 1) 0%,
+      rgba(238, 130, 150, 1) 100%
+    );
+    box-shadow: 0px 12px 8px 0px rgba(236, 94, 107, 0.14);
+    border-radius: 44px;
+    .add {
+      text-align: center;
+      font-size: 36px;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 1);
+      line-height: 88px;
+    }
+  }
+}

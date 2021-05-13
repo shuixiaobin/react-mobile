@@ -1,0 +1,374 @@
+@import '../../assets/style/variable.less';
+
+#userInfor {
+  padding: 0 30px 40px 30px;
+  background: @nomore-bg;
+
+  .submitBtn {
+    width: 630px;
+    height: 88px;
+    line-height: 88px;
+    background: linear-gradient(
+      90deg,
+      rgba(243, 93, 107, 1) 0%,
+      rgba(238, 130, 150, 1) 100%
+    );
+    box-shadow: 0px 12px 8px 0px rgba(236, 94, 107, 0.14);
+    border-radius: 44px;
+    border: none;
+    outline: none;
+    color: @white;
+    display: block;
+    margin: 80px auto 30px auto;
+  }
+  .xyTip {
+    width: 630px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: @price-col;
+    line-height: 32px;
+    margin: 40px auto 30px auto;
+    .protocolTipText {
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+
+  :global {
+    /* check */
+    .lastflex {
+      text-align: right;
+    }
+
+    .am-list-item .am-input-label.am-input-label-5 {
+      width: 130px;
+    }
+
+    .my-radio .am-radio,
+    .my-radio .am-radio-disabled {
+      padding: 16px;
+      border: 2px solid @container-bg;
+      border-radius: 50%;
+      margin-right: 12px;
+      margin-left: 28px;
+      overflow: hidden;
+    }
+
+    .am-list-item.am-input-item {
+      padding: 0;
+    }
+
+    .am-radio.am-radio-checked .am-radio-inner {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: ~'url(@{myUrl}check-bg.png)' no-repeat center;
+      background-size: 100% 100%;
+    }
+
+    .am-radio-inner:after {
+      display: none;
+    }
+
+    /* input */
+    .am-list-item .am-list-line .am-input-control,
+    .am-list-item .am-input-control input:disabled,
+    .am-list-item .am-list-line .am-input-control input,
+    .am-list-item .am-list-line .am-input-control input:read-only,
+    .am-list-item .am-list-line .am-input-control input:disabled,
+    .am-list-item .am-input-item .am-list-item-middle,
+    .am-list-item .am-list-line .am-list-extra,
+    .am-list-item.am-input-item,
+    .am-flexbox.am-flexbox-align-center,
+    .am-list-item .am-list-line .am-list-content,
+    .am-list-item .am-list-line {
+      opacity: 1 !important;
+      color: @main-black!important;
+      background: @nomore-bg;
+      box-sizing: border-box;
+    }
+
+    .am-list-item .am-list-line,
+    .am-list-item.am-input-item,
+    .am-flexbox.am-flexbox-align-center {
+      height: 124px;
+      line-height: 124px;
+    }
+
+    .am-list-item .am-list-line .am-list-content {
+      color: @infor-card!important;
+    }
+
+    .am-list-item .am-list-line .am-list-content,
+    .am-list-item .am-list-line .am-list-extra {
+      line-height: 100px !important;
+    }
+
+    .am-flexbox.am-flexbox-align-center {
+      border-bottom: 2px solid @infor-line;
+    }
+
+    .am-flexbox-item,
+    .am-list-item .am-input-label {
+      font-size: 32px;
+      color: @infor-card;
+      padding-right: 28px;
+    }
+
+    .am-list-item .am-input-control .fake-input-container .fake-input {
+      font-size: 32px;
+    }
+
+    .am-list-item .am-list-line .am-list-extra,
+    .am-list-item .am-input-control input:disabled,
+    .am-list-item .am-list-line .am-input-control input,
+    .am-list-item .am-list-line .am-input-control input:disabled,
+    .am-list-item .am-list-line .am-input-control input:read-only {
+      opacity: 1 !important;
+      color: @main-black!important;
+      font-size: 32px;
+      text-align: right;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .am-list-item .am-list-line .am-input-control input {
+      padding: 46px 0;
+    }
+
+    .am-list-item .am-input-extra {
+      overflow: visible;
+      padding-left: 15px;
+    }
+
+    /* picker */
+    .am-list-item {
+      padding-left: 0;
+    }
+
+    .am-list-item .am-list-line .am-list-content,
+    .am-list-item .am-list-line .am-list-extra {
+      color: @infor-card;
+      font-size: 32px;
+    }
+
+    .am-list-item .am-list-line .am-list-arrow-horizontal {
+      height: 32px;
+    }
+
+    .am-picker-popup-header {
+      .am-picker-popup-header-left,
+      .am-picker-popup-title,
+      .am-picker-popup-header-right {
+        font-size: 32px;
+      }
+      .am-picker-popup-title {
+        color: @title-black!important;
+      }
+      .am-picker-popup-header-left {
+        color: @date-col!important;
+      }
+      .am-picker-popup-header-right {
+        color: @price-col!important;
+      }
+    }
+  }
+}
+
+#signUp {
+  > p {
+    font-weight: 600;
+    color: @title-black;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    > span {
+      font-weight: 400;
+      color: @infor-card;
+      padding-left: 20px;
+    }
+  }
+}
+
+/* popup */
+#OtherPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: @nomore-bg;
+  z-index: 1000;
+  .popup_header {
+    background: @white;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    position: relative;
+    .popup_header_left,
+    .popup_header_right {
+      position: absolute;
+      top: 0;
+      padding: 0 30px;
+    }
+    .popup_header_left {
+      left: 0;
+      color: @date-col-2;
+    }
+    .popup_header_right {
+      right: 0;
+      color: @price-col;
+    }
+    .popup_header_content {
+      font-weight: 600;
+      color: @main-black;
+    }
+  }
+  .popup_main {
+    padding: 20px 30px;
+    .popup_main_content {
+      > p {
+        padding: 30px 0 20px 0;
+        color: @price-col;
+      }
+      > ul {
+        > li {
+          margin-bottom: 40px;
+          > p,
+          > div {
+            color: @title-black;
+          }
+          > p {
+            font-weight: 600;
+            padding-bottom: 20px;
+          }
+          > div {
+            display: flex;
+            text-align: center;
+            > span {
+              flex: 1;
+              width: 210px;
+              height: 60px;
+              line-height: 60px;
+              display: block;
+              border-radius: 30px;
+              background: #f7f7f7;
+              &.focus {
+                background: @price-col;
+                color: @white;
+              }
+            }
+          }
+        }
+      }
+    }
+    :global {
+      .am-list-header {
+        padding: 20px 0;
+      }
+      .am-list-body {
+        height: 260px;
+        background: @nomore-bg;
+        padding: 18px 20px;
+        border-radius: 8px;
+        opacity: 0.5;
+        border: 1px solid @time-col;
+        overflow: hidden;
+      }
+
+      .am-list .am-list-item.am-textarea-item {
+        padding: 0;
+      }
+      .am-list-item,
+      .am-list
+        .am-list-item.am-textarea-item.am-textarea-item-single-line
+        .am-textarea-control {
+        border: none;
+        outline: none;
+        background: @nomore-bg;
+      }
+      .am-textarea-control {
+        padding: 0;
+      }
+      .am-textarea-control textarea {
+        line-height: 40px;
+        font-size: 28px;
+      }
+      .am-textarea-count,
+      .am-textarea-count span {
+        color: @text-area-col;
+      }
+    }
+  }
+}
+
+.xy {
+  color: @date-col;
+  margin-top: 40px;
+  line-height: 50px;
+  > i {
+    color: @red;
+    margin-right: 10px;
+  }
+  > span {
+    color: @blue;
+  }
+}
+
+.resign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .resignIcon {
+    color: @white;
+    background: @price-col;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 72px;
+    margin: 100px 0 32px 0;
+  }
+  .resignTip {
+    width: 580px;
+    font-size: 28px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #9B9B9B;
+    line-height: 44px;
+    text-align: center;
+  }
+  .resignBtn {
+    width: 480px;
+    height: 88px;
+    line-height: 88px;
+    text-align: center;
+    border-radius: 48px;
+    font-size: 32px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+  }
+  .btnSubmit {
+    color: @white;
+    background: @price-col;
+    margin: 148px 0 32px 0;
+  }
+  .btnConcat {
+    background: @white;
+    border: 1px solid #e1e1e1;
+    i {
+      color: @price-col;
+      margin-right: 8px;
+    }
+  }
+}
+
+.signResult {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

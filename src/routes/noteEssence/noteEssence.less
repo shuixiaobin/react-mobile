@@ -1,0 +1,92 @@
+@import '../../assets/style/variable.less';
+
+#noteEssenceWrap {
+  .note_item {
+    background: @white;
+    padding: 30px;
+    > div {
+      &:first-child {
+        width: calc(100% - 240px- 40px);
+        .note_title {
+          position: relative;
+          color: @title-black;
+          height: 78px;
+          > span {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+          }
+        }
+        .note_bottom {
+          color: @time-col;
+          margin-top: 30px;
+        }
+      }
+      &:last-child {
+        > img {
+          width: 240px;
+          height: 140px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+
+/* bar */
+.zw {
+  height: 100px;
+}
+
+.buttomZw {
+  height: 120px;
+}
+
+#barWrap {
+  width: 100%;
+  background: @white;
+  z-index: 100;
+  &.set-top {
+    position: fixed;
+    top: 90px;
+    left: 0;
+  }
+  :global {
+    .am-tabs {
+      padding-bottom: 0;
+    }
+    .am-tabs-tab-bar-wrap {
+      height: 88px;
+      background: @white;
+    }
+
+    .am-tabs-default-bar-tab {
+      width: auto !important;
+      font-size: 32px;
+      padding: 0 30px;
+      height: 88px;
+      color: @title-black;
+    }
+
+    .am-tabs-default-bar-tab-active {
+      color: @main-black;
+      font-weight: 600;
+      z-index: 10;
+    }
+    .am-whitespace {
+      display: none;
+    }
+    .am-tabs-default-bar-underline {
+      border: none;
+      bottom: 10px;
+      height: 8px;
+      z-index: 9;
+      border-radius: 6px;
+      background: @linear-col-3;
+      width: 68px !important;
+    }
+    .am-list-body:before {
+      background: transparent !important;
+    }
+  }
+}

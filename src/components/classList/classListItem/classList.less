@@ -1,0 +1,115 @@
+@import '../../../assets/style/variable.less';
+
+.classList {
+  width: 100%;
+  background: @white;
+  .getMore {
+    width: 100%;
+    height: 116px;
+    text-align: center;
+    line-height: 116px;
+    background: @nomore-bg;
+    > img {
+      width: 192px;
+      height: 56px;
+      vertical-align: middle;
+    }
+  }
+
+  .item_collect_bg {
+    height: 44px;
+    background: @nomore-bg ~'url(@{myUrl}list-bg.png)' no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  .item_border_bg {
+    height: 22px;
+    background: @nomore-bg;
+  }
+
+  .title,
+  .item_title {
+    font-weight: 500;
+    color: @title-black;
+    line-height: 40px;
+  }
+  .item_title {
+    line-height: 45px;
+  }
+  .title {
+    font-weight: 600;
+    display: table-cell;
+    > span,
+    > img {
+      vertical-align: middle;
+    }
+    > img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .classItem {
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.05);
+    .collectTag {
+      color: @blue;
+    }
+    .timeLength {
+      color: @date-col-2;
+    }
+    .classCountDown {
+      color: @class-list-time;
+      i {
+        font-style: normal;
+      }
+    }
+    .price {
+      color: @price-col;
+      margin-bottom: 18px;
+    }
+    .teacher {
+      color: @title-black;
+      position: relative;
+      > ul {
+        > li {
+          margin-right: 40px;
+          text-align: center;
+          > p {
+            &:first-child {
+              margin: 0 auto 10px auto;
+              width: 56px;
+              height: 56px;
+              > img {
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+    .others {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .limitType {
+      color: @date-col-2;
+    }
+    .activeTag {
+      height: 30px;
+      margin-bottom: 18px;
+      > p {
+        > span {
+          height: 30px;
+          border-radius: 15px;
+          border: 1px solid @price-col;
+          line-height: 30px;
+          padding: 0 12px;
+          color: @price-col;
+          margin-left: 10px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

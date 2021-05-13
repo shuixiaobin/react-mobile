@@ -1,0 +1,124 @@
+@import '../../../assets/style/variable.less';
+
+#global_header {
+  width: 100%;
+  height: 90px;
+  color: @main-black;
+  background: @white;
+  padding: 20px 30px;
+  position: relative;
+  .logo {
+    width: 208px;
+    height: 48px;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  /* 右侧按钮 */
+  .func {
+    vertical-align: middle;
+    > li {
+      line-height: 60px;
+      &.login {
+        > img {
+          width: 60px;
+          height: 60px;
+          vertical-align: middle;
+        }
+      }
+      &:first-child {
+        margin-right: 40px;
+        border-right: 2px solid @container-bg;
+        padding-right: 10px;
+      }
+      &:last-child {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+.class_detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .back {
+    font-size: 58px;
+  }
+  .title {
+    flex: 1;
+    height: 50px;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    line-height: 50px;
+  }
+  .rightIcon {
+    display: flex;
+    align-items: center;
+    .referIcon {
+      background: ~'url(@{myUrl}kefy_yh.gif)' no-repeat center;
+      background-size: 100% 100%;
+      margin-right: 20px;
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      vertical-align: middle;
+      // padding: 10px;
+      color: @price-col;
+    }
+  }
+}
+.home_header,
+.collect_header {
+  z-index: 1000;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+}
+.class_detail,
+.collect_header {
+  .title,
+  .collectTitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.zw {
+  height: 90px;
+}
+
+/* 搜索 input */
+.searchInp {
+  width: 516px;
+  height: 72px;
+  border-radius: 36px;
+  color: @title-black;
+  background: @container-bg;
+  position: relative;
+  > i {
+    position: absolute;
+    color: @search-icon;
+    top: 18px;
+    &.searchIcon {
+      left: 20px;
+    }
+    &.searchClose {
+      right: 20px;
+    }
+  }
+  input {
+    width: 400px;
+    height: 72px;
+    line-height: 72px;
+    border-radius: 36px;
+    background: inherit;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+  }
+}

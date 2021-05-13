@@ -1,0 +1,118 @@
+@import "../../../assets/style/variable.less";
+#refundContainer {
+  background: @white;
+  .agreeRefundTip {
+    font-size: 28px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #868686;
+    padding: 40px 40px 0 40px;
+  }
+  .process {
+    padding: 48px 40px 120px 120px;
+    .processItem {
+      display: flex;
+      height: 150px;
+      width: 100%;
+      .processLeft {
+        width: 36px;
+        flex-grow: 0;
+        position: relative;
+        .line {
+          position: absolute;
+          width: 2px;
+          top: 0;
+          bottom: 0;
+          left: 18px;
+          background: #d1d1d1;
+        }
+        .lineActive {
+          background: #ff4e45;
+        }
+        .icon {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          border-radius: 50%;
+          z-index: 1;
+          position: relative;
+          color: #fff;
+          background: #d1d1d1;
+        }
+        .iconActive {
+          background: #ff4e45 !important;
+        }
+        .iconSpan {
+          width: 20px;
+          height: 20px;
+          position: relative;
+          margin-left: 8px;
+          border-radius: 50%;
+          background: #d1d1d1;
+        }
+      }
+
+      .processRight {
+        flex-grow: 1;
+        margin-left: 32px;
+        p {
+          font-size: 32px;
+          font-family: PingFangSC-Medium, PingFang SC;
+          font-weight: 500;
+          color: #868686;
+          margin-bottom: 8px;
+        }
+        .active {
+          color: #333;
+        }
+        span {
+          font-size: 24px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #868686;
+        }
+      }
+    }
+    .processItemNo {
+      height: 260px;
+      .reason {
+        width: 522px;
+        font-size: 24px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #868686;
+        line-height: 1.5;
+      }
+      .viewReason {
+        color: #37ADFF !important;
+        margin-left: 12px;
+      }
+    }
+  }
+  .contactService {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    .contactServiceBtn {
+      margin: 0 auto;
+      width: 686px;
+      height: 96px;
+      background: #ffffff;
+      box-shadow: 0px 0px 28px 0px rgba(0, 0, 0, 0.15);
+      border-radius: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        color: @price-col;
+        margin-right: 8px;
+      }
+      span {
+        font-weight: 400;
+        font-family: "PingFangSC-Regular, PingFang SC";
+        color: #333;
+      }
+    }
+  }
+}
